@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -62,11 +63,11 @@
             //              |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans          &trans        &trans     &trans            &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans          &trans        &trans     &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp MINUS         &kp EQUAL
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans        &trans     &trans            &trans
-                &trans  &trans  &trans  &mo 3   &trans    &trans  &trans          &trans          &trans        &trans
+&trans  &trans  &trans  &trans  &trans        &trans                    &trans          &trans          &trans        &trans     &trans            &trans
+&trans  &trans  &trans  &trans  &bl BL_TOG    &trans                    &trans          &trans          &trans        &trans     &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans  &trans  &trans  &trans  &bl BL_CYCLE  &trans                    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp MINUS         &kp EQUAL
+&trans  &trans  &trans  &trans  &trans        &trans  &trans    &trans  &trans          &trans          &trans        &trans     &trans            &trans
+                &trans  &trans  &trans        &mo 3   &trans    &trans  &trans          &trans          &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
