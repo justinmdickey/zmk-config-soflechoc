@@ -30,7 +30,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+                <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         lower_layer {
@@ -74,11 +74,11 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans                           &trans           &trans                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans                           &rgb_ug RGB_TOG  &trans                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &rgb_ug RGB_EFR                  &rgb_ug RGB_EFF  &trans                             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans                           &trans           &trans           &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
